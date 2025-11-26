@@ -3,17 +3,9 @@ import joblib
 from flask import Flask, request, jsonify
 import joblib
 
+# 1. Initialize the Flask application
 app = Flask(__name__)
 
-# Define the filename for the exported scaler
-scaler_filename = 'scaler.joblib'
-
-# Save the fitted scaler using joblib.dump()
-joblib.dump(scaler, scaler_filename)
-
-print(f"Fitted StandardScaler exported to '{scaler_filename}'")
-
-# 1. Initialize the Flask application
 
 
 # 2. Define the mean values for columns where '0's were replaced during training.
